@@ -1,2 +1,1 @@
-// Shared types
-// e.g. export interface User { id: string; email: string; ... }
+export type { User, UserRole } from "./user";
