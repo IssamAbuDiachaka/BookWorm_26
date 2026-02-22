@@ -1,6 +1,7 @@
 import { BookOpen, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import SuggestedLecturers from "@/features/dashboard/components/SuggestedLecturers";
 import { cn } from "@/lib/utils";
 
 export function RightSidebar() {
@@ -12,16 +13,7 @@ export function RightSidebar() {
       )}
     >
       <section>
-        <h2 className="mb-3 text-sm font-semibold text-foreground">
-          Suggested Lecturers
-        </h2>
-        <Card>
-          <CardContent className="flex flex-col gap-2 pt-4">
-            <p className="text-sm text-muted-foreground">
-              Placeholder: lecturer cards will appear here.
-            </p>
-          </CardContent>
-        </Card>
+        <SuggestedLecturers />
       </section>
       <section>
         <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">

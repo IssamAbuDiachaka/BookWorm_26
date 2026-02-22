@@ -2,3 +2,4 @@ export { WelcomeSection } from "./WelcomeSection";
 export { RecentMedia } from "./RecentMedia";
 export { NewPapers } from "./NewPapers";
 export { UpcomingEvent } from "./UpcomingEvent";
+export { default as SuggestedLecturers } from "./SuggestedLecturers";
