@@ -1,6 +1,7 @@
-import { BookOpen, MessageSquare } from "lucide-react";
+import { BookOpen } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ActiveChatRooms } from "@/features/dashboard/components/ActiveChatRooms";
 import SuggestedLecturers from "@/features/dashboard/components/SuggestedLecturers";
 import { cn } from "@/lib/utils";
 
@@ -8,7 +9,7 @@ export function RightSidebar() {
   return (
     <aside
       className={cn(
-        "fixed right-0 top-0 z-20 hidden h-screen w-[300px] flex-col gap-6 border-l bg-card p-4 lg:flex",
+        "fixed right-0 top-0 z-20 hidden h-screen w-[300px] flex-col gap-6 overflow-y-auto overscroll-y-contain border-l bg-card p-4 lg:flex",
         "pt-14"
       )}
     >
@@ -16,17 +17,7 @@ export function RightSidebar() {
         <SuggestedLecturers />
       </section>
       <section>
-        <h2 className="mb-3 flex items-center gap-2 text-sm font-semibold text-foreground">
-          <MessageSquare className="size-4" aria-hidden />
-          Active Chat Rooms
-        </h2>
-        <Card>
-          <CardContent className="flex flex-col gap-2 pt-4">
-            <p className="text-sm text-muted-foreground">
-              Placeholder: active rooms will appear here.
-            </p>
-          </CardContent>
-        </Card>
+        <ActiveChatRooms />
       </section>
       <section>
         <Card className="border-primary/20 bg-primary/5">
